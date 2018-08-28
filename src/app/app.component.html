@@ -1,0 +1,11 @@
+<div class="label" id="text">
+  Right click the image to show available actions:
+</div>
+
+<dx-context-menu [dataSource]="items" [width]="200" target="#text" (onItemClick)="itemClick($event)">
+  <div *dxTemplate="let e of 'item'">
+    <div>
+      <i [class]="e.icon" aria-hidden="true"></i> {{e.text}}
+    </div>
+  </div>
+</dx-context-menu>
