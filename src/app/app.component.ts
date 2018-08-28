@@ -11,16 +11,29 @@ export class AppComponent {
 
   constructor() {
     this.items = [{
-      text: 'Share',
+      text: 'Set Evidence',
       icon: 'fa fa-plus',
       items: [
-        { text: 'Facebook' },
-        { text: 'Twitter' }]
-    },
-      { text: 'Download', icon: 'dx-icon-download' },
-      { text: 'Add Comment', icon: 'dx-icon-add' },
-      { text: 'Add to Favorite', icon: 'dx-icon-favorites' }
-    ];
+        {
+          text: 'Low',
+          action: function () {
+            console.log('Evidencia: Low');
+          }
+        },
+        {
+          text: 'Medium',
+          action: function () {
+            console.log('Evidencia: Medium');
+          }
+        },
+        {
+          text: 'High',
+          action: function () {
+            console.log('Evidencia: High');
+          }
+        }
+      ]
+    }];
   }
 
   itemClick(e) {
